@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leslie C. Bomar 3rd">
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href='contact.css'>
+    <link rel="stylesheet" href="text_styling.css">
+    <link rel="stylesheet" media="screen and (max-width: 799px)" href="contact_mobile.css">
+
+    <!-- Google Material Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <title>Official Website of the Author Aimee Ungersma</title>
+</head>
+<body>
+    <div id="left_column"></div>
+    <div id="middle_column">
+        <nav>
+            <img id="signature" alt="aimee ungersma's signature">
+            <a href="index.html"><h3 class="Lato">Home</h3></a>
+            <a href="contact.html"><h3 class="Lato">Contact</h3></a>
+            <a href="events.html"><h3 class="Lato">Events</h3></a>
+            <a href="media.html"><h3 class="Lato">Media</h3></a>
+        </nav>
+        <main>
+            <form id="connect_form">
+                <h1>Connect With Aimee</h1>
+                <label id="message_name_label" for="message_name">Name</label><br/>
+                <input id="message_name" type="text" name="message_name"><br/>
+                <label id="message_email_label" for="message_email">Email</label><br/>
+                <input id="message_email" type="email" name="message_email"><br/>
+                <label id="message_content_label" for="message_content">Message</label><br/>
+                <textarea id="message_content" type="text" name="message_content" rows="6"></textarea><br/>
+                <input type="submit" value="Send" id="message_button">
+            </form>
+        </main>
+        <footer>
+            <div id="newsletter_signup">
+                <div id="newsletter_header">
+                    <h1 class="Handlee">Don't count on Horace. For the latest information, sign up for my newsletter.</h1>
+                </div>
+                <form id="newsletter_form">
+                    <div>
+                        <label for="user_name" class="Handlee">Name</label><br/>
+                        <input type="text" id="user_name" name='user_name' class='InputSizing'><br/>
+                    </div>
+                    <div>
+                        <label for="user_email" class="Handlee">Email</label><br/>
+                        <input type="text" id="user_email" name="user_email" class='InputSizing'><br/>
+                    </div>
+                    <input type="submit" value="Sign Up" id="newsletter_button" class="CormorantGaramond">
+                </form>
+            </div>
+            <div id="external_links">
+                <a href="https://www.facebook.com/groups/988607102078724/"><img class="icons" id="facebook_icon"></a>
+                <a href="https://www.instagram.com/ungersmaaimee/"><img class="icons" id="instagram_icon"></a>
+                <a href="https://aimeeungersma.com/" id="globe_logo"><img class="icons" id="globe_icon"></a>
+                <a><img class="icons" id="twitter_icon"></a>
+                <a href="https://www.amazon.com/stores/Aimee-Ungersma/author/B09QMW32P1"><img class="icons" id="amazon_icon"></a>
+                <a href="https://www.barnesandnoble.com/w/damned-if-i-do-aimee-ungersma/1140863979"><img class="icons" id="barnes_noble_icon"></a>
+                <a id="austin_macauley_logo" href="https://www.austinmacauley.com/book/damned-if-i-do"><img class="icons" id="austin_macauley_icon"></a>
+            </div>
+        </footer>
+    </div>
+    <div id="right_column"></div>
+    <script src="footer.js"></script>
+</body>
+</html>
