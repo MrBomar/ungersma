@@ -1,0 +1,50 @@
+body {
+    margin: 0px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+article > div {
+    padding: 40px;
+}
+
+article > div > iframe {
+    margin: auto;
+    display: block;
+}
+
+article > div > img {
+    width: 100%;
+}
+
+article:nth-of-type(odd) {
+    background-color: rgba(142,5,158,.15);
+}
+
+article:nth-of-type(odd) > div:nth-child(1){
+    grid-column: 1;
+}
+
+article:nth-of-type(odd) > div:nth-child(2) {
+    grid-column: 2;
+}
+
+article:nth-of-type(even) > div:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+article:nth-of-type(even) > div:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.video {
+    max-width: 560px;
+    max-height: 315px;
+    width: calc(50vw - 80px);
+    height: calc(calc(50vw - 80px) * .56);
+}

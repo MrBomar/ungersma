@@ -1,0 +1,41 @@
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    cursor:pointer;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: center;
+    max-width: 1280px;
+}
+
+/* TODO - Remove this image pointer when design is complete. */
+
+#signature {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    scale: 75%;
+    content: url("media/1280/signature.png");
+}
+
+header > nav {
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+header > nav > a > h3 {
+    user-select: none;
+}
+
+header > nav > a:hover {
+    text-shadow: 2px 2px 2px darkgrey;
+
+}
+
+hr {
+    margin: 0px;
+}

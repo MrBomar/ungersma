@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+}
+
+main {
+    margin: 0px;
+    display: flex;
+    background: url("./media/pexels-irina-lyadova-8891138.jpg") no-repeat center center;
+    background-size: contain;
+    height: 67vw;
+    max-height: 856px;
+    align-items: center;
+}
+
+#connect_form {
+    margin: 5vw 10vw;
+    display: block;
+}
+
+#connect_form > br {
+    height: 1.5em;
+}
+
+#connect_form > h1, #connect_form > label {
+    color: white;
+}
+
+#connect_form > label {
+    font-size: x-large;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+#message_name, #message_email, #message_content {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+#message_name, #message_email {
+    width: 30vw;
+}
+
+#message_content {
+    width: 80vw;
+    max-width: calc(1280px - 20vw);
+    font-size: 1.5em;
+}
+
+#message_button {
+    float: right;
+    padding: 8px 30px;
+    font-size: 1.2em;
+    max-width: 100px;
+}

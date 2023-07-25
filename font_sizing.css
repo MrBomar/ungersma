@@ -1,0 +1,65 @@
+.FontSizeLarge {
+    font-size: 1.5em;
+}
+
+.FontSizeMedium {
+    font-size: 3vw;
+}
+
+.FontSizeSmall {
+    font-size: 2.5vw;
+}
+
+.InputSizing {
+    line-height: 3vw;
+}
+
+/* @media (orientation: portrait) {
+    .FontSizeLarge {
+        font-size: 3.0vw;
+    }
+    
+    .FontSizeMedium {
+        font-size: 3vh;
+    }
+    
+    .FontSizeSmall {
+        font-size: 2.5vh;
+    }
+    
+    .InputSizing {
+        line-height: 3vw;
+    }
+} */
+
+@media (max-width: 500px) {
+    .FontSizeLarge {
+        font-size: 8vw;
+    }
+
+    .FontSizeMedium {
+        font-size: 6vw;
+    }
+
+    .FontSizeSmall {
+        font-size: 4.1vw;
+    }
+}
+
+@media (min-width: 1280px) {
+    .FontSizeLarge {
+        font-size: 3.15em;
+    }
+    
+    .FontSizeMedium {
+        font-size: 2.4em;
+    }
+    
+    .FontSizeSmall {
+        font-size: 1.4em;
+    }
+
+    .InputSizing {
+        line-height: 2.4em;
+    }
+}

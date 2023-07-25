@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital@1&family=Handlee&family=Lato&display=swap');
+
+.AbrilFatface {
+    font-family: '.Abril Fatface', cursive;
+}
+
+.CormorantGaramond {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.Handlee {
+    font-family: 'Handlee', cursive;
+}
+
+.Lato {
+    font-family: 'Lato', sans-serif;
+}

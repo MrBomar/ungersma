@@ -1,0 +1,318 @@
+:root {
+    --book_review_height: calc(calc(100vw * 1.49) - 5vh);
+}
+
+#about_aimee {
+    display:inline-block;
+    margin: 2vw;
+}
+
+#headshot {
+    float: left;
+    margin-right: 2vw;
+    max-height: 70vh;
+    max-width: 50%;
+}
+
+#about_aimee > p {
+    grid-column: 2;
+}
+
+#book_preview {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 5vh 5vh;
+}
+
+#book_image {
+    max-width: 50%;
+    max-height: 40vh;
+    max-width: calc(1280px * 0.5);
+}
+
+#book_excerpt {
+    padding: 0px 5vw 0px 5vw;
+    background-color: rgba(255,255,255, 0.64);
+    border: 1px solid rgb(112,112,112);
+    text-align: left;
+}
+
+#book_links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#book_links > a > img {
+    max-width: 30vw;
+}
+
+#book_reviews {
+    --panel-height: 100vh;
+    --max-panel-height: 149.92vw;
+    height: var(--panel-height);
+    max-height: var(--max-panel-height);
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+}
+
+#review_header {
+    height: calc(var(--panel-height) * .225);
+    max-height: calc(var(--max-panel-height) * .225);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#review_panel {
+    height: calc(var(--panel-height) * .55);
+    max-height: calc(var(--max-panel-height) * .55);
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 10px 10px 6px rgba(0,0,0, .20);
+    margin: 0px 6.9vw;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+}
+
+.Review {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    padding: 15px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.Review > p {
+    margin: auto;
+    text-align: justify;
+}
+
+.Review > h3 {
+    text-align: right;
+    font-weight: 100;
+}
+
+#review_navigation {
+    height: calc(var(--panel-height) * .225);
+    max-height: calc(var(--max-panel-height) * .225);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.RoundButtonParent {
+    border: 1px solid darkgray;
+    border-radius: 100%;
+    box-shadow: 5px 5px 5px darkgrey;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+}
+
+.RoundButtonChild {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+}
+
+.RoundButtonParent:hover {
+    box-shadow: 5px 5px 5px black;
+}
+
+.append {
+    animation: append_animate 1s;
+}
+
+.remove {
+    animation: remove_animate 1s;
+}
+
+@keyframes remove_animate {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes append_animate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@media (orientation: landscape) {
+    #book_preview {
+        --book_preview_height: 90vh;
+        position:initial;
+        height: var(--book_preview_height);
+        display: grid;
+        grid-template-columns: 60% 5% 35%;
+        grid-template-rows: 60% 5% 35%;
+    }
+
+    #book_image {
+        grid-column: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        height: auto;
+        max-height: 100%;
+        width: auto;
+        max-width: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    #book_excerpt {
+        grid-column: 1;
+        grid-row: 1;
+        background-color: rgba(255,255,255, 0.64);
+        border: 1px solid rgb(112,112,112);
+        text-align: left;
+    }
+
+    #book_links {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #book_links > a > img {
+        max-width: 24vw;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    #book_reviews {
+        height: 56vw;
+        max-width: 1280px;
+        padding: 0vw 6% 0vw 6%;
+        display: grid;
+        grid-template-columns: 66% 33%;
+        grid-template-rows: 12.5% 75% 12.5%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #review_header {
+        text-align: right;
+        grid-column: 1;
+        grid-row: 2;
+        height: auto;
+        justify-content: right;
+        display: block;
+        margin: 25px 25px 0px 0px;
+    }
+
+    #review_panel {
+        grid-column: 2;
+        grid-row: 2;
+        height: auto;
+        margin: 0px;
+    }
+
+    #review_panel > h3 {
+        text-align: right;
+    }
+
+    #review_navigation {
+        grid-column: 2;
+        grid-row: 3;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width: 700px) {
+    #book_reviews {
+        grid-template-rows: 2% 15% 60% 23%;
+        grid-template-columns: 100%;
+    }
+
+    #review_header {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0px;
+        text-align: center;
+    }
+
+    #review_panel {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #review_navigation {
+        grid-column: 1;
+        grid-row: 4;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #book_links > a > img {
+        max-width: calc(1280px * 0.24);
+    }
+
+    #book_reviews {
+        max-height: calc(1280px * .56);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Mobile portrait view */
+    #amazon_button{ content: url("media/400/amazon_custom.png") }
+    #barnes_noble_button{ content: url("media/400/barnes_noble_custom.png") }
+    #book_image{ content: url("media/400/book_cover.png") }
+    #book_preview{ background-image: url("media/400/black_wood_background.png") }
+    #book_reviews{ background-image: url("media/400/green_leaves_background.png") }
+    #headshot{ content: url("media/400/headshot.png") }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    #amazon_button{ content: url("media/600/amazon_custom.png") }
+    #barnes_noble_button{ content: url("media/600/barnes_noble_custom.png") }
+    #book_image{ content: url("media/600/book_cover.png") }
+    #book_preview{ background-image: url("media/600/black_wood_background.png") }
+    #book_reviews{ background-image: url("media/600/green_leaves_background.png") }
+    #headshot{ content: url("media/600/headshot.png") }
+}
+
+@media screen and (min-width:601px) and (max-width: 850px) {
+    #amazon_button{ content: url("media/850/amazon_custom.png") }
+    #barnes_noble_button{ content: url("media/850/barnes_noble_custom.png") }
+    #book_image{ content: url("media/850/book_cover.png") }
+    #book_preview{ background-image: url("media/850/black_wood_background.png") }
+    #book_reviews{ background-image: url("media/850/green_leaves_background.png") }
+    #headshot{ content: url("media/850/headshot.png") }
+}
+
+@media screen and (min-width: 851px) {
+    #amazon_button{ content: url("media/1280/amazon_custom.png") }
+    #barnes_noble_button{ content: url("media/1280/barnes_noble_custom.png") }
+    #book_image{ content: url("media/1280/book_cover.png") }
+    #book_preview{ background-image: url("media/1280/black_wood_background.png") }
+    #book_reviews{ background-image: url("media/1280/green_leaves_background.png") }   
+    #headshot{ content: url("media/1280/headshot.png") }
+}

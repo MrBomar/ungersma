@@ -1,0 +1,7 @@
+{
+    "reviews":[
+        {"review":"This is the 1st review"},{"signature":"Signature1"},
+        {"review":"This is the 2nd review"},{"signature":"Signature2"},
+        {"review":"This is the 3rd review"},{"signature":"Signature3"}
+    ]
+}

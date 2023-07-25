@@ -1,0 +1,232 @@
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+    cursor:pointer;
+}
+
+#left_column {
+    grid-column: 1;
+}
+
+#middle_column {
+    grid-column: 2;
+    width: 100vw;
+    max-width: 1280px;
+}
+
+#left_column {
+    grid-column: 3;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    grid-template-rows: auto auto; 
+    text-align: center;
+}
+
+#signature {
+    grid-column: 1 / 5;
+    grid-row: 1;
+    max-height: 25vh;
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newsletter_signup {
+    height: 95vh;
+    display: grid;
+    padding: 2.5vh 5vw;
+    max-width: 90vw;
+    grid-template-rows: 40% 60%;
+}
+
+#newsletter_header {
+    display: flex;
+    justify-content: space-around;
+}
+
+#newsletter_header > h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+#newsletter_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+}
+
+#newsletter_form > div > input {
+    font-size: 1.2em;
+    height: 1.6em;
+}
+
+#newsletter_form > div > label {
+    font-size: 2em;
+}
+
+#newsletter_button {
+    align-self: center;
+    height: 3em;
+    min-width: 9em;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#external_links {
+    max-width: 100vw;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+}
+
+#external_links > a {
+    max-width: 33vw;
+}
+
+#external_links > a > img {
+    margin: 4vw;
+}
+
+#austin_macauley_logo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#austin_macauley_logo > img {
+    max-width: 90vw;
+}
+
+@media screen and (min-width: 601px) {
+    footer {
+        all: revert;
+        height: 55.625vw;
+        max-height: 711px;
+        display: grid;
+        grid-template-rows: 80% 20%;
+        max-width: 100vw;
+    }
+
+    #newsletter_signup {
+        height: auto;
+        width: 100vw;
+        max-width: 1280px;
+        padding: 0px;
+        grid-template-columns: 40% 60%;
+    }
+
+    #newsletter_header, #newsletter_form {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    #newsletter_form {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: end;
+        margin-right: 20px
+    }
+
+    #newsletter_form > div > label {
+        font-size: 1.5em;
+        color: white;
+    }
+
+    #newsletter_form > div > input {
+        font-size: 1.2em;
+        height: 1.5em;
+    }
+
+    #external_links {
+        all: revert;
+        width: 100vw;
+        max-width: 1280px;
+        background: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #external_links > a {
+        max-width: none;
+    }
+
+    #external_links > a > img {
+        margin: 0px;
+    }
+
+    .icons {
+        max-width: 11vw;
+        max-height: 42px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body {
+        grid-template-columns: auto 1280px auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Mobile portrait view */
+    #amazon_icon{ content: url("media/400/amazon_logo.png") }
+    #austin_macauley_icon{ content: url("media/400/austin_macauley_logo.png") }
+    #barnes_noble_icon{ content: url("media/400/barnes-and-noble-logo.png") }
+    #facebook_icon{ content: url("media/400/facebook_logo.png") }
+    #globe_icon{ content: url("media/400/globe_logo_white.png") }
+    #instagram_icon{ content: url("media/400/Instagram_logo.png") }
+    #newsletter_signup{ background-image: url("media/400/mobile_crow_background.png") }
+    #signature{ content: url("media/400/signature.png") }
+    #twitter_icon{ content: url("media/400/twitter_logo.png") }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    #amazon_icon{ content: url("media/600/amazon_logo.png") }
+    #austin_macauley_icon{ content: url("media/600/austin_macauley_logo.png") }
+    #barnes_noble_icon{ content: url("media/600/barnes-and-noble-logo.png") }
+    #facebook_icon{ content: url("media/600/facebook_logo.png") }
+    #globe_icon{ content: url("media/600/globe_logo_white.png") }
+    #instagram_icon{ content: url("media/600/Instagram_logo.png") }
+    #newsletter_signup{ background-image: url("media/600/mobile_crow_background.png") }
+    #signature { content: url("media/600/signature.png") }
+    #twitter_icon{ content: url("media/600/twitter_logo.png") }
+}
+
+@media screen and (min-width:601px) and (max-width: 850px) {
+    #amazon_icon{ content: url("media/850/amazon_logo.png") }
+    #austin_macauley_icon{ content: url("media/850/austin_macauley_logo.png") }
+    #barnes_noble_icon{ content: url("media/850/barnes-and-noble-logo.png") }
+    #facebook_icon{ content: url("media/850/facebook_logo.png") }
+    #globe_icon{ content: url("media/850/globe_logo_white.png") }
+    #instagram_icon{ content: url("media/850/Instagram_logo.png") }
+    footer{ background-image: url("media/850/crow_background.png") }
+    #signature { content: url("media/850/signature.png") }
+    #twitter_icon{ content: url("media/850/twitter_logo.png") }
+}
+
+@media screen and (min-width: 851px) {
+    #amazon_icon{ content: url("media/1280/amazon_logo.png") }
+    #austin_macauley_icon{ content: url("media/1280/austin_macauley_logo_transparent.png") }
+    #barnes_noble_icon{ content: url("media/1280/barnes-and-noble-logo.png") }
+    #facebook_icon{ content: url("media/1280/facebook_logo.png") }
+    #globe_icon{ content: url("media/1280/globe_logo_white.png") }
+    #instagram_icon{ content: url("media/1280/Instagram_logo.png") }
+    footer{ background-image: url("media/1280/crow_background.png") }
+    #signature { content: url("media/1280/signature.png") }
+    #twitter_icon{ content: url("media/1280/twitter_logo.png") }
+}
